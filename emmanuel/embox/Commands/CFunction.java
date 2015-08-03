@@ -16,7 +16,7 @@ public CFunction( IAction FnIn, IAction FnOut ){
 @Override
 protected void DoIn(){
 	if ( FnIn != null ) {
-//		FnIn.act(  );
+		FnIn.act(0);
 	}
 	ExecuteInComplete();
 }
@@ -29,7 +29,7 @@ protected void CancelIn(){
 @Override
 protected void DoOut(){
 	if ( FnOut != null ) {
-//		FnOut.act();
+		FnOut.act(0);
 	}
 	ExecuteOutComplete();
 }

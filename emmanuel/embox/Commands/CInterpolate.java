@@ -11,6 +11,29 @@ public float fromIn, toIn, fromOut, toOut, timeIn, timeOut;
 public Interpolate.Eases inFn, outFn;
 private boolean active =false;
 
+public CInterpolate( ){
+	this(
+			0,
+			1,
+			0,
+			0.6f,
+			0.33f,
+			Interpolate.Eases.OutQuad,
+			Interpolate.Eases.InQuad
+	);
+}
+public CInterpolate(  float timeIn, float timeOut, Interpolate.Eases inFn, Interpolate.Eases outFn ){
+	this(
+			0,
+			1,
+			0,
+			timeIn,
+			timeOut,
+			inFn ,
+			outFn
+	);
+}
+
 public CInterpolate( float fromIn, float pose, float toOut, float timeIn, float timeOut, Interpolate.Eases inFn, Interpolate.Eases outFn ){
 	super();
 	this.fromIn = interpolated = fromIn;
